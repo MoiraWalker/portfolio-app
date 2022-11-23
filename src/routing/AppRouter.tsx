@@ -8,10 +8,12 @@ export interface IRouterProps {}
 
 export const AppRouter: React.FunctionComponent<IRouterProps> = (props) => {
     return (
-        <BrowserRouter>
+        <BrowserRouter>z
             <Routes>
-                <Route path="/" component={HomePage} />
-                <Route path='/about' component={AboutPage} />
+                <Route>
+                    <Route path="/" ><HomePage/></Route> 
+                    <Route path='/about'> <AboutPage/></Route> 
+                </Route>   
             </Routes>
         </BrowserRouter>
     )
