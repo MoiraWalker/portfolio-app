@@ -1,19 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.scss';
-import { AboutPage, HomePage } from './pages';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navigation from './components/navigation/Navigation';
+import { AppRouter } from './routing/AppRouter';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-            <Routes>
-                <Route>
-                    <Route path="/" ><HomePage/></Route> 
-                    <Route path='/about'><AboutPage/></Route> 
-                </Route>   
-            </Routes>
-        </BrowserRouter>
+      <Navigation />
+        <Router>
+          <AppRouter />
+        </Router>
     </div>
   );
 }
